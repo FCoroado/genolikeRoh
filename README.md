@@ -10,8 +10,9 @@ eg: calcRoh(beagle = file.beagle, PhomMin = 0.6, PhomMax = 0.9)
 
 To calculate the total sum of ROHs, call function calcSNroh(roh, minSize), where roh = list of roh length (output from calcROH) and minSize = the minimum size in Mb to consider when calculating the total sum of ROHs.
 eg: calcSROH(calcRoh(file.beagle), minSize = 3)
+
+This image, from my master thesis, illustrates how the script works:
 ![alt text](https://github.com/FCoroado/genolikeRoh/blob/master/genocalc.JPG?raw=true)
 
 Author: Francisco Coroado Santos
 
-calcSNroh <- function(roh, minSize){
