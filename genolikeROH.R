@@ -1,8 +1,10 @@
-#Functions for ROH calc with Beagle File (Geno.Likelihoods)
+#Functions to calculate Runs Of Homozigosity.
+#Input: Beagle File
+#more information on how to get this data at http://www.popgen.dk/angsd/index.php/Genotype_Likelihoods
 
 #---
-#Get a mx with the chromossome, position and a column with the prob of
-#being homozygous  for each of our individuals
+#Get a matrix with the chromossome, position and a column with the prob of
+#being homozygous P(hom) for each individuals
 #---
 #Input: beagle file, nIndividuals
 #Output: Matrix with Chr number, ChrPosition and P(hom) for Ind 1 and 2 
@@ -42,8 +44,9 @@ get_chr_ind_mx <- function(chr_number,ind,get_pos_beagle){
 }
 
 #---
-#Get a true or false matrix where True = for sites with Phom>90 (Sites
-#with P>0.5 but are between 2 sites with Phom>0.9 are included)
+#Get a true or false matrix where True = for sites with Phom > Y (Sites
+#with P > X but are between 2 sites with Phom > Y are included)
+#Example: X = 0.5 and Y = 0.9
 #---
 #Input: Matrix with Positions for one Chr and Phom
 #Output: T/F matrix 
