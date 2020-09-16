@@ -1,7 +1,7 @@
 #Functions to calculate Runs Of Homozigosity.
 #Input: Beagle File
 #more information on how to get this data at http://www.popgen.dk/angsd/index.php/Genotype_Likelihoods
-
+#output: Length of each ROH detected and total sum of ROHs
 #---
 #Get a matrix with the chromossome, position and a column with the prob of
 #being homozygous P(hom) for each individuals
